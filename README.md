@@ -3,8 +3,15 @@ Bootstrap with FreeRTOS and STM32 HAL libraries for STM32F103C8T6 microcontroler
 This example was created for STM32F103 microcontroller version from [eBay](http://www.ebay.com/itm/STM32F103C8T6-ARM-STM32-Minimum-System-Development-Board-Module-For-Arduino-/311156408508?hash=item48725e00bc:g:ngMAAOSwygJXhGtV)
 
 Also in bin directory existed 2 scripts:
- 1. import_cubemx_project.sh - import source files from STM32 CubeMX tool
- 2. install_freertos.sh - install fresh FreeRTOS
+
+ - import_cubemx_project.sh - import source files from STM32 CubeMX tool
+ - install_freertos.sh - install fresh FreeRTOS
+ 
+## Clion configuration
+Open "Preferences -> Build, Execution, Deployment -> CMake" and set next fields:
+
+ - CMake options: `-DCMAKE_TOOLCHAIN_FILE=STM32F103xb.cmake`
+ - Build output path: `build`
  
 ## Import STM32 CubeMX sources
  1. Open STM32 CubeMX tool
