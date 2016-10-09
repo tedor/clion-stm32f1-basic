@@ -1,10 +1,15 @@
 project(clion-stm32f1-basic)
 cmake_minimum_required(VERSION 3.5.0)
+ENABLE_LANGUAGE(ASM)
 
 add_definitions(-DSTM32F103xB)
+add_definitions(-DUSE_HAL_DRIVER)
+add_definitions(-DHSE_VALUE=8000000)
 
 file(GLOB_RECURSE USER_SOURCES "src/*.c")
 file(GLOB_RECURSE SYSTEM_SOURCES "system/src/*.c")
+
+
 
 add_library(CMSIS
         system/src/stm32f1xx/system_stm32f1xx.c
